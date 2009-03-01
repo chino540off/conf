@@ -3,14 +3,13 @@
 source "../functions/functions"
 RM=rm
 
-stat_busy "Zsh installation"
+stat_busy "Xdefaults installation"
 
-for file in zshrc zsh; do
+for file in Xdefaults; do
   if [ -e ~/.$file ]; then
     $RM ~/.$file
   fi
   ln -s $PWD/$file ~/.$file
-  printhl "$file linked"
 done
 
 stat_done
