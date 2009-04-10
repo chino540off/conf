@@ -1,9 +1,11 @@
-ALL= awesome urxvt vim zsh
+ALL= awesome git urxvt vim zsh
 
 install: $(ALL)
 
 awesome:
 	@cd awesome && ./install.sh
+git:
+	@cd git && ./install.sh
 urxvt:
 	@cd urxvt && ./install.sh
 vim:
