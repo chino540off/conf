@@ -15,4 +15,10 @@ zsh:
 x:
 	@cd x && ./install.sh
 
+clean:
+	@cd vim && ./clean.sh
+
+dist: clean
+	@cd .. && tar cjf conf.tar.bz2 conf && mv conf.tar.bz2 conf
+
 .PHONY: $(ALL)
